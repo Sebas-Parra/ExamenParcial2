@@ -38,12 +38,13 @@ btnPrestar.addEventListener("click", function () {
     let libroPrestado = inputPrestados.value;
     pPrestados.innertHTML = '';
     let libroEncontrado = libros.find(libro => libro.titulo === libroPrestado);
+    let libroEncontradoPrestado = prestados.find(libro => libro.titulo === libroPrestado);
+    console.log(libroEncontradoPrestado);
     if (libroEncontrado) {
         pPrestados.innerHTML += '<br>El libro se ha prestado con exito!!';
         pPrestados.innerHTML = 'Libro prestado: ' + libroEncontrado.titulo + ' ' + libroEncontrado.autor + ' ' + libroEncontrado.año + ' ' + libroEncontrado.genero;
         prestados.push(libroEncontrado);
         libros.pop(libroEncontrado)
-
     } else {
         pLibros.innerHTML = 'Libro no encontrado';
     }
@@ -51,11 +52,11 @@ btnPrestar.addEventListener("click", function () {
 
 
 btnBuscar.addEventListener("click", function () {
-    librosFiltrados.innerHTML = '';
+    pLibros.innerHTML = '';
     let generoAutor = inputGeneroAutor.value;
     let librosPorFiltracion = libros.filter(libro => libro.genero === generoAutor || libro.autor === generoAutor || libro.titulo === generoAutor);
     for (let i = 0; i < librosPorFiltracion.length; i++) {
-        librosFiltrados.innerHTML += 'Libro ' + i +' AUTOR:' + librosPorFiltracion[i].titulo + ' ' + librosPorFiltracion[i].autor + ' ' + librosPorFiltracion[i].año + ' ' + librosPorFiltracion[i].genero + '<br>';
+        pLibros.innerHTML += 'Libro ' + i + ' AUTOR:' + librosPorFiltracion[i].titulo + ' ' + librosPorFiltracion[i].autor + ' ' + librosPorFiltracion[i].año + ' ' + librosPorFiltracion[i].genero + '<br>';
     }
 })
 
@@ -63,7 +64,6 @@ btnDisponibles.addEventListener("click", function () {
     pLibros.innerHTML = '';
     for (let i = 0; i < libros.length; i++) {
         pLibros.innerHTML += '-Libro ' + i + ', TITULO: ' + libros[i].titulo + ', AUTOR: ' + libros[i].autor + ',AÑO: ' + libros[i].año + 'GENERO: ' + libros[i].genero + '<br>';
-        
     }
 })
 
