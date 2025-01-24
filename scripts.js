@@ -24,13 +24,14 @@ btnBuscar.addEventListener("click", function () {
     let generoAutor = inputGeneroAutor.value;
     let librosPorFiltracion = libros.filter(libro => libro.genero === generoAutor || libro.autor === generoAutor || libro.titulo === generoAutor);
     for (let i = 0; i < librosPorFiltracion.length; i++) {
-        librosFiltrados.innerHTML += 'Libro ' + i + ' ' + librosPorFiltracion[i].titulo + ' ' + librosPorFiltracion[i].autor + ' ' + librosPorFiltracion[i].año + ' ' + librosPorFiltracion[i].genero + '<br>';
+        librosFiltrados.innerHTML += 'Libro ' + i +' AUTOR:' + librosPorFiltracion[i].titulo + ' ' + librosPorFiltracion[i].autor + ' ' + librosPorFiltracion[i].año + ' ' + librosPorFiltracion[i].genero + '<br>';
     }
 })
 
 btnDisponibles.addEventListener("click", function () {
     for (let i = 0; i < libros.length; i++) {
-        pLibros.innerHTML += 'Libro ' + i + ' ' + libros[i].titulo + ' ' + libros[i].autor + ' ' + libros[i].año + ' ' + libros[i].genero + '<br>';
+        pLibros.innerHTML += '-Libro ' + i + ', TITULO: ' + libros[i].titulo + ', AUTOR: ' + libros[i].autor + ',AÑO: ' + libros[i].año + 'GENERO: ' + libros[i].genero + '<br>';
+        
     }
 })
 
