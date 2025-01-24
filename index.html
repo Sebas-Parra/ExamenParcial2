@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Biblioteca</title>
+</head>
+
+<body>
+    <div class="Contenedor1">
+    <div class="TituloLibreria">
+        <h1 class="Titulo">Libreria</h1>
+    </div>
+    <br>
+    <h2 class="Lista">Libros:</h2>
+    <button class="disponiblesbtn" id="disponibles">Libros disponibles</button>
+    <button id="btn-mostrar-prestados">Libros Prestados</button>
+    <br>
+    Buscar por Titulo o Genero:
+    <input type="text" id="Genero-autor" placeholder="Caperucita Roja">
+    <button id="btn-search" onchange="filtrados()">Buscar</button>
+
+    <div class="Linea">-</div>
+    <p id="libros-disponibles"></p>
+    <div class="Linea">-</div>
+    </div>
+
+    <p class="Lista">Libros filtrados: </p>
+    <p id="libros-disponibles"></p>
+    <h3>Prestar Libros:</h3>
+    Buscar por titulo: <input type="text" id="prestar-libro" placeholder="Caperucita Roja">
+    <button id="btn-prestar">Prestar</button>
+    <p id="libro-prestado"></p>
+
+    <h3>Recordatorios: </h3>
+    <p></p>
+
+
+
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

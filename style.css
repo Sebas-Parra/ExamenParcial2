@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    
+}
+
+.TituloLibreria{
+    background-color: cornflowerblue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+
+
+.Lista{
+    font-size: 40px;
+    background-color: cadetblue;
+    margin-bottom: 20px;
+}
+
+button{
+    background-color:cadetblue;
+    border-radius: 10%;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.disponiblesbtn{
+    margin-left: 50px;
+}
+
+.Linea{
+    background-color: cadetblue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: cadetblue;
+}
