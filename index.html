@@ -4,19 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Biblioteca</title>
 </head>
 
 <body>
-    <h1>Libreria</h1>
+    <div class="TituloLibreria">
+    <h1 class="Titulo">Libreria</h1>
+    </div>
     <br>
+
+    <p >Libros: </p>
+    <p id="libros-disponibles"></p>
+    <button id="disponibles">Libros disponibles:</button>
+
     <h2>Libros:</h2>
     <button id="disponibles">Libros disponibles</button>
     <button id="btn-mostrar-prestados">Libros Prestados</button>
+
     <br>
     <br>
     Buscar por Titulo o Genero:
     <input type="text" id="Genero-autor">
+    <button id="btn-search" onchange="filtrados()">Buscar</button>
+    <p class="Lista">Libros filtrados: </p>
     <button id="btn-search">Buscar</button>
     <p id="libros-disponibles"></p>
     <p id="libros-filtrados"></p>
