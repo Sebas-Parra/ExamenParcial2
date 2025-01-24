@@ -22,9 +22,17 @@ const pPrestados = document.getElementById("libro-prestado");
 
 
 
+
 let libros = [new libro("El señor de los anillos", "J.R.R. Tolkien", 1954, "Fantasía"), new libro("Harry Potter", "J.K. Rowling", 2000, "Fantasía"), new libro("Cien años de soledad", "Gabriel García Márquez", 1967, "Realismo mágico", new libro("El principito", "Antoine de Saint-Exupéry", 1943, "Infantil"))];
 
 let prestados = [];
+
+bntPrestados.addEventListener("click", function () {
+    pLibros.innerHTML = '';
+    for (let i = 0; i < prestados.length; i++) {
+        pLibros.innerHTML += 'Libro ' + i + ' ' + prestados[i].titulo + ' ' + prestados[i].autor + ' ' + prestados[i].año + ' ' + prestados[i].genero + '<br>';
+    }
+})
 
 btnPrestar.addEventListener("click", function () {
     let libroPrestado = inputPrestados.value;
